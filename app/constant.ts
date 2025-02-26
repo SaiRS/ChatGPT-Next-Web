@@ -589,8 +589,8 @@ const iflytekModels = [
   "generalv3.5",
   "4.0Ultra",
 ];
-// for tencent
-const deepseekModels = ["deepseek-v3", "deepseek-r1"];
+
+const deepseekModels = ["deepseek-chat", "deepseek-coder", "deepseek-reasoner"];
 
 const xAIModes = [
   "grok-beta",
