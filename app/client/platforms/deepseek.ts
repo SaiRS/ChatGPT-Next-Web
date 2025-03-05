@@ -96,7 +96,7 @@ export class DeepSeekApi implements LLMApi {
       // Please do not ask me why not send max_tokens, no reason, this param is just shit, I dont want to explain anymore.
     };
 
-    console.log("[Request] openai payload: ", requestPayload);
+    console.log("[Request] deepseek payload: ", requestPayload);
 
     const shouldStream = !!options.config.stream;
     const controller = new AbortController();

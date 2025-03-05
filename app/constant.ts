@@ -496,7 +496,8 @@ const openaiModels = [
   "o3-mini",
 ];
 
-const googleModels = [
+const googleModels: string[] = [];
+[
   "gemini-1.0-pro", // Deprecated on 2/15/2025
   "gemini-1.5-pro-latest",
   "gemini-1.5-pro",
@@ -522,7 +523,8 @@ const googleModels = [
   "gemini-2.0-pro-exp-02-05",
 ];
 
-const anthropicModels = [
+const anthropicModels: string[] = [];
+[
   "claude-instant-1.2",
   "claude-2.0",
   "claude-2.1",
@@ -537,7 +539,8 @@ const anthropicModels = [
   "claude-3-5-sonnet-latest",
 ];
 
-const baiduModels = [
+const baiduModels: string[] = [];
+[
   "ernie-4.0-turbo-8k",
   "ernie-4.0-8k",
   "ernie-4.0-8k-preview",
@@ -551,7 +554,8 @@ const baiduModels = [
   "ernie-tiny-8k",
 ];
 
-const bytedanceModels = [
+const bytedanceModels: string[] = [];
+[
   "Doubao-lite-4k",
   "Doubao-lite-32k",
   "Doubao-lite-128k",
@@ -560,7 +564,8 @@ const bytedanceModels = [
   "Doubao-pro-128k",
 ];
 
-const alibabaModes = [
+const alibabaModes: string[] = [];
+[
   "qwen-turbo",
   "qwen-plus",
   "qwen-max",
@@ -570,7 +575,8 @@ const alibabaModes = [
   "qwen-max-longcontext",
 ];
 
-const tencentModels = [
+const tencentModels: string[] = [];
+[
   "hunyuan-pro",
   "hunyuan-standard",
   "hunyuan-lite",
@@ -580,19 +586,16 @@ const tencentModels = [
   "hunyuan-vision",
 ];
 
-const moonshotModes = ["moonshot-v1-8k", "moonshot-v1-32k", "moonshot-v1-128k"];
+const moonshotModes: string[] = [];
+// ["moonshot-v1-8k", "moonshot-v1-32k", "moonshot-v1-128k"];
 
-const iflytekModels = [
-  "general",
-  "generalv3",
-  "pro-128k",
-  "generalv3.5",
-  "4.0Ultra",
-];
+const iflytekModels: string[] = [];
+["general", "generalv3", "pro-128k", "generalv3.5", "4.0Ultra"];
 
 const deepseekModels = ["deepseek-chat", "deepseek-coder", "deepseek-reasoner"];
 
-const xAIModes = [
+const xAIModes: string[] = [];
+[
   "grok-beta",
   "grok-2",
   "grok-2-1212",
@@ -603,7 +606,8 @@ const xAIModes = [
   "grok-2-vision-latest",
 ];
 
-const chatglmModels = [
+const chatglmModels: string[] = [];
+[
   "glm-4-plus",
   "glm-4-0520",
   "glm-4",
@@ -653,17 +657,17 @@ export const DEFAULT_MODELS = [
       sorted: 1, // 这里是固定的，确保顺序与之前内置的版本一致
     },
   })),
-  ...openaiModels.map((name) => ({
-    name,
-    available: true,
-    sorted: seq++,
-    provider: {
-      id: "azure",
-      providerName: "Azure",
-      providerType: "azure",
-      sorted: 2,
-    },
-  })),
+  // ...openaiModels.map((name) => ({
+  //   name,
+  //   available: true,
+  //   sorted: seq++,
+  //   provider: {
+  //     id: "azure",
+  //     providerName: "Azure",
+  //     providerType: "azure",
+  //     sorted: 2,
+  //   },
+  // })),
   ...googleModels.map((name) => ({
     name,
     available: true,
